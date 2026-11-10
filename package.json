@@ -1,0 +1,25 @@
+{
+  "name": "neon-database",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thienlam23130146/neon-database.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/thienlam23130146/neon-database/issues"
+  },
+  "homepage": "https://github.com/thienlam23130146/neon-database#readme",
+  "devDependencies": {
+    "prisma": "^7.10.1",
+    "tsx": "^4.23.15"
+  }
+}
