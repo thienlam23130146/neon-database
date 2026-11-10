@@ -20,6 +20,28 @@ model User {
   wishlist     WishlistItem[]
 }
 
+model Transaction {
+  id String @id @default(cuis())
+  userId String
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  type TransactionType
+  amount Int
+  description String 
+  category Category
+  date DateTime
+  createdAt DateTime @default(now())
+  @@index([userId, date])
+}
+
+model WishlistItem {
+  id String @id @default(cuis())
+  userId String
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  name String
+  cost Int
+  priority Priority @default(MEDIUM)
+}
+
 enum TransactionType {
   INCOME
   EXPENSE
